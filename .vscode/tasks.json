@@ -8,12 +8,13 @@
                 "-fdiagnostics-color=always",
                 "-g",
                 "main.c",
+                "line.c",
                 "debug.c",
                 "chunk.c",
                 "memory.c",
                 "value.c",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.out"
+                "${fileDirname}/main.out"
             ],
             "options": {
                 "cwd": "${fileDirname}"
