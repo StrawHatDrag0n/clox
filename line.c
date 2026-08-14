@@ -19,8 +19,8 @@ void freeLineArray(LineArray* array) {
 void growLineArray(LineArray* array) {
     int oldCapacity = array->capacity;
     array->capacity = GROW_CAPACITY(oldCapacity);
-    array->line_number = GROW_ARRAY(int*, array->line_number, oldCapacity, array->capacity);
-    array->line_count = GROW_ARRAY(int*, array->line_count, oldCapacity, array->capacity);
+    array->line_number = GROW_ARRAY(int, array->line_number, oldCapacity, array->capacity);
+    array->line_count = GROW_ARRAY(int, array->line_count, oldCapacity, array->capacity);
 }
 
 void writeLineArray(LineArray* array, int line) {
@@ -33,7 +33,7 @@ void writeLineArray(LineArray* array, int line) {
         if(array->line_number[array->count-1] == line) {
             array->line_count[array->count-1]++;
         } else {
-            if(array->capacity < array->count + 1) growLineArray(&array);
+            if(array->capacity < array->count + 1) growLineArray(array);
             array->line_number[array->count] = line;
             array->line_count[array->count] = 1;
             array->count++;
