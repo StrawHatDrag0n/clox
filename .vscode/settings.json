@@ -3,5 +3,6 @@
         "debug.h": "c",
         "stdlib.h": "c",
         "line.h": "c"
-    }
+    },
+    "claudeCode.useTerminal": true
 }

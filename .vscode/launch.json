@@ -1,14 +1,13 @@
 {
     "configurations": [        
-        
         {
             "name": "Run Main",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}.out",
+            "program": "${workspaceFolder}/main.out",
             "args": [],
+            "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",
