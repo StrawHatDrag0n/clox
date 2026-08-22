@@ -21,10 +21,19 @@
                     "description": "Set Disassembly Flavor to Intel",
                     "text": "-gdb-set disassembly-flavor intel",
                     "ignoreFailures": true
+                },
+                {
+                    "description": "Disable shell startup to avoid WSL TIOCSCTTY warning",
+                    "text": "set startup-with-shell off",
+                    "ignoreFailures": true
                 }
             ],
             "preLaunchTask": "Run Main",
-            "miDebuggerPath": "/usr/bin/gdb"
+            "miDebuggerPath": "/usr/bin/gdb",
+            "logging": {
+                "engineLogging": true,
+                "trace": true
+            }
         }
     ],
     "version": "2.0.0"
